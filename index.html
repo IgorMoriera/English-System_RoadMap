@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English System — Roadmap Técnico</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <div class="logo-tag">// roadmap v1</div>
+      <div class="logo-title">English System</div>
+      <div class="logo-sub">para falantes de português · foco gramática</div>
+      <div class="progress-wrap">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-label"><span id="progressCount">0/0 tópicos</span><span id="progressPct">0%</span></div>
+      </div>
+    </div>
+    <div id="navContainer"></div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="topbar">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="menu-toggle" id="menuToggle">☰</div>
+        <div class="crumb">ENGLISH-SYSTEM / <b id="crumbText">overview</b></div>
+      </div>
+      <div class="search-box"><input type="text" id="searchInput" placeholder="Buscar tópico... (ex: 'present perfect')"></div>
+      <div class="topbar-actions">
+        <div class="btn active" id="ptToggle">PT-BR: ON</div>
+      </div>
+    </div>
+    <div class="content" id="content"></div>
+  </div>
+</div>
+
+<!-- DATA — um arquivo por grupo gramatical, edite o conteúdo aqui -->
+<script src="js/data/group-1.js"></script>
+<script src="js/data/group-2.js"></script>
+<script src="js/data/group-3.js"></script>
+<script src="js/data/group-4.js"></script>
+<script src="js/data/group-5.js"></script>
+<script src="js/data/group-6.js"></script>
+<script src="js/data/practice-data.js"></script>
+
+<!-- APP ENGINE — lógica de renderização, busca, progresso. Não precisa editar pra mudar conteúdo -->
+<script src="js/app.js"></script>
+</body>
+</html>
