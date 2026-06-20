@@ -60,6 +60,21 @@ function buildNav(){
       </div>
     </div>`;
   });
+  html += `<div class="nav-section-title">Referência</div>
+  <div class="nav-section" style="padding-top:2px;">
+    <div class="nav-item ${currentView==='irregular-verbs'?'active':''}" data-view="irregular-verbs" onclick="goTo('irregular-verbs')">
+      <span class="dot"></span><span class="nlabel">Verbos Irregulares</span>
+      <span class="ncount">${IRREGULAR_VERBS.patterns.reduce((s,p)=>s+p.verbs.length,0)}</span>
+    </div>
+    <div class="nav-item ${currentView==='phrasal-verbs'?'active':''}" data-view="phrasal-verbs" onclick="goTo('phrasal-verbs')">
+      <span class="dot"></span><span class="nlabel">Phrasal Verbs</span>
+      <span class="ncount">${PHRASAL_VERBS.groups.reduce((s,g)=>s+g.verbs.length,0)}</span>
+    </div>
+    <div class="nav-item ${currentView==='collocations'?'active':''}" data-view="collocations" onclick="goTo('collocations')">
+      <span class="dot"></span><span class="nlabel">Collocations</span>
+      <span class="ncount">${COLLOCATIONS.categories.reduce((s,c)=>s+c.pairs.length,0)}</span>
+    </div>
+  </div>`;
   nav.innerHTML = html;
 }
 
@@ -78,6 +93,9 @@ function crumbLabel(view){
   if(view==='overview') return 'overview';
   if(view==='practice') return 'daily-practice';
   if(view==='exams') return 'exam-prep';
+  if(view==='irregular-verbs') return 'irregular-verbs';
+  if(view==='phrasal-verbs') return 'phrasal-verbs';
+  if(view==='collocations') return 'collocations';
   const g = ALL_GROUPS.find(x=>x.id===view);
   return g ? g.id : view;
 }
@@ -185,7 +203,7 @@ function renderOverview(){
   <div class="hero">
     <div class="hero-eyebrow">// sistema de gramática para fluência</div>
     <h1>English System</h1>
-    <p>Roadmap de gramática inglesa reorganizado em lógica de sistema, não lista de 149 itens soltos. Construído pra quem pensa em estruturas: cada tempo verbal, modal e conector é tratado como uma função com input, lógica e output — comparado direto com o português pra mostrar exatamente onde a lógica diverge.</p>
+    <p>Roadmap de gramática inglesa reorganizado em lógica de sistema, não lista de itens soltos. Construído pra quem pensa em estruturas: cada tempo verbal, modal e conector é tratado como uma função com input, lógica e output — comparado direto com o português pra mostrar exatamente onde a lógica diverge.</p>
   </div>
   <div class="matrix-wrap">
     <div class="matrix-title">// O núcleo: 12 tempos verbais = 3 tempos × 4 aspectos. Clique numa célula.</div>
@@ -193,7 +211,7 @@ function renderOverview(){
   </div>
   <div style="margin-top:40px;">
     <div class="group-desc" style="max-width:none;">
-      Abaixo, os outros 5 grupos do sistema. Recomendo essa ordem: <b style="color:var(--ink)">01 Sistema Verbal → 02 Conditionals/Passive → 03 Modais → 04 Estruturas → 05 Conectores → 06 Artigos/Quantificadores</b>. Mas use a busca acima pra ir direto onde precisar.
+      Abaixo, os outros 5 grupos do sistema. Recomendamos essa ordem: <b style="color:var(--ink)">01 Sistema Verbal → 02 Conditionals/Passive → 03 Modais → 04 Estruturas → 05 Conectores → 06 Artigos/Quantificadores</b>. Mas use a busca acima pra ir direto onde precisar.
     </div>
   </div>
   <div class="res-grid" style="margin-top:8px;">
@@ -204,6 +222,25 @@ function renderOverview(){
       </div>
     `).join('')}
   </div>
+  <div style="margin-top:40px;">
+    <div class="group-desc" style="max-width:none;">
+      <b style="color:var(--ink)">Tabelas de referência</b> — vocabulário fixo pra consultar enquanto estuda ou escreve, sem precisar memorizar tudo de uma vez.
+    </div>
+  </div>
+  <div class="res-grid" style="margin-top:8px;">
+    <div class="res-card" style="cursor:pointer;" onclick="goTo('irregular-verbs')">
+      <h4>Verbos Irregulares</h4>
+      <p style="font-size:12.5px;color:var(--ink-faint);">${IRREGULAR_VERBS.patterns.reduce((s,p)=>s+p.verbs.length,0)} verbos · V1 / V2 / V3</p>
+    </div>
+    <div class="res-card" style="cursor:pointer;" onclick="goTo('phrasal-verbs')">
+      <h4>Phrasal Verbs</h4>
+      <p style="font-size:12.5px;color:var(--ink-faint);">${PHRASAL_VERBS.groups.reduce((s,g)=>s+g.verbs.length,0)} verbos · organizados por verbo-base</p>
+    </div>
+    <div class="res-card" style="cursor:pointer;" onclick="goTo('collocations')">
+      <h4>Collocations</h4>
+      <p style="font-size:12.5px;color:var(--ink-faint);">${COLLOCATIONS.categories.reduce((s,c)=>s+c.pairs.length,0)} combinações fixas</p>
+    </div>
+  </div>
   `;
 }
 
@@ -211,7 +248,7 @@ function renderOverview(){
 function renderPractice(){
   return `
   <div class="group-head"><span class="group-num">PRX</span><h2>Prática Diária</h2></div>
-  <div class="group-desc">Gramática sem uso ativo não vira fluência. Essa rotina cabe em ~30-40 min/dia e foi pensada pra rodar em paralelo com uma rotina dinâmica em vez de competir por tempo com ela.</div>
+  <div class="group-desc">Gramática sem uso ativo não vira fluência. Essa rotina cabe em ~30-40 min/dia e foi pensada pra rodar em paralelo com sua rotina normal — trabalho, estudo, ou qualquer atividade do dia — em vez de competir por tempo com ela.</div>
   ${DAILY_ROUTINE.map(d=>`
     <div class="daily-block">
       <div class="dtime">${d.time}</div>
@@ -249,6 +286,145 @@ function renderExams(){
   `;
 }
 
+/* ---------- IRREGULAR VERBS PAGE ---------- */
+function renderIrregularVerbs(filter=''){
+  const f = filter.toLowerCase().trim();
+  const data = IRREGULAR_VERBS;
+  let totalShown = 0;
+  const patternsHtml = data.patterns.map(p=>{
+    const rows = p.verbs.filter(v=> !f || v.join(' ').toLowerCase().includes(f));
+    totalShown += rows.length;
+    if(rows.length===0) return '';
+    return `
+    <div class="ref-pattern">
+      <div class="ref-pattern-head">
+        <div class="ref-pattern-label">${p.label}</div>
+        <div class="ref-pattern-note">${p.note_en}</div>
+        <div class="ref-pattern-note pt">${p.note_pt}</div>
+      </div>
+      <table class="verb-table">
+        <tr><th>Base (V1)</th><th>Past (V2)</th><th>Participle (V3)</th><th>Tradução</th></tr>
+        ${rows.map(v=>`<tr><td class="v1">${v[0]}</td><td class="v2">${v[1]}</td><td class="v3">${v[2]}</td><td class="vpt">${v[3]}</td></tr>`).join('')}
+      </table>
+    </div>`;
+  }).join('');
+
+  return `
+  <div class="group-head"><h2>${data.title}</h2></div>
+  <div class="group-desc">${data.subtitle}</div>
+  <div class="warn-box" style="margin-bottom:24px;">
+    <span>${data.desc_en}</span><br>
+    <span class="tb-text pt" style="margin-top:6px;border:none;padding-left:0;">${data.desc_pt}</span>
+  </div>
+  <div class="ref-filter">
+    <input type="text" id="verbFilterInput" placeholder="Filtrar verbos... (ex: 'think', 'pensar')" value="${filter.replace(/"/g,'')}">
+    <div class="ref-count">${totalShown} verbo(s) exibido(s)</div>
+  </div>
+  <div id="verbTableWrap">${patternsHtml || '<p style="color:var(--ink-faint);font-size:13px;">Nenhum verbo encontrado.</p>'}</div>
+  `;
+}
+
+/* ---------- PHRASAL VERBS PAGE ---------- */
+function renderPhrasalVerbs(filter=''){
+  const f = filter.toLowerCase().trim();
+  const data = PHRASAL_VERBS;
+  let totalShown = 0;
+  const groupsHtml = data.groups.map(g=>{
+    const rows = g.verbs.filter(v=> !f || v.join(' ').toLowerCase().includes(f));
+    totalShown += rows.length;
+    if(rows.length===0) return '';
+    return `
+    <div class="pv-group">
+      <div class="pv-group-head">${g.base}</div>
+      ${rows.map(v=>`
+        <div class="pv-row">
+          <div class="pv-phrase">${v[0]}</div>
+          <div class="pv-pt">${v[1]}</div>
+          <div class="pv-example">${v[2]}</div>
+        </div>
+      `).join('')}
+    </div>`;
+  }).join('');
+
+  return `
+  <div class="group-head"><h2>${data.title}</h2></div>
+  <div class="group-desc">${data.subtitle}</div>
+  <div class="warn-box" style="margin-bottom:24px;">
+    <span>${data.desc_en}</span><br>
+    <span class="tb-text pt" style="margin-top:6px;border:none;padding-left:0;">${data.desc_pt}</span>
+  </div>
+  <div class="ref-filter">
+    <input type="text" id="pvFilterInput" placeholder="Filtrar phrasal verbs... (ex: 'give up', 'desistir')" value="${filter.replace(/"/g,'')}">
+    <div class="ref-count">${totalShown} phrasal verb(s) exibido(s)</div>
+  </div>
+  <div id="pvTableWrap">${groupsHtml || '<p style="color:var(--ink-faint);font-size:13px;">Nenhum phrasal verb encontrado.</p>'}</div>
+  `;
+}
+
+/* ---------- COLLOCATIONS PAGE ---------- */
+function renderCollocations(filter=''){
+  const f = filter.toLowerCase().trim();
+  const data = COLLOCATIONS;
+  let totalShown = 0;
+  const catsHtml = data.categories.map(c=>{
+    const rows = c.pairs.filter(p=> !f || p.join(' ').toLowerCase().includes(f));
+    totalShown += rows.length;
+    if(rows.length===0) return '';
+    return `
+    <div class="ref-pattern">
+      <div class="ref-pattern-head">
+        <div class="ref-pattern-label">${c.label}</div>
+        <div class="ref-pattern-note">${c.note_en}</div>
+        <div class="ref-pattern-note pt">${c.note_pt}</div>
+      </div>
+      <table class="colloc-table">
+        <tr><th>Expressão</th><th>Tradução</th><th>Observação</th></tr>
+        ${rows.map(p=>`<tr><td class="cphrase">${p[0]}</td><td class="cpt">${p[1]}</td><td class="cnote">${p[2]}</td></tr>`).join('')}
+      </table>
+    </div>`;
+  }).join('');
+
+  return `
+  <div class="group-head"><h2>${data.title}</h2></div>
+  <div class="group-desc">${data.subtitle}</div>
+  <div class="warn-box" style="margin-bottom:24px;">
+    <span>${data.desc_en}</span><br>
+    <span class="tb-text pt" style="margin-top:6px;border:none;padding-left:0;">${data.desc_pt}</span>
+  </div>
+  <div class="ref-filter">
+    <input type="text" id="collocFilterInput" placeholder="Filtrar collocations... (ex: 'make', 'decision')" value="${filter.replace(/"/g,'')}">
+    <div class="ref-count">${totalShown} combinação(ões) exibida(s)</div>
+  </div>
+  <div id="collocTableWrap">${catsHtml || '<p style="color:var(--ink-faint);font-size:13px;">Nenhuma combinação encontrada.</p>'}</div>
+  `;
+}
+
+// in-memory filter state for reference pages (kept separate from main search)
+let refFilters = { 'irregular-verbs': '', 'phrasal-verbs': '', 'collocations': '' };
+
+function wireRefFilter(view, inputId, renderFn, wrapSelector){
+  const input = document.getElementById(inputId);
+  if(!input) return;
+  input.addEventListener('input', function(e){
+    refFilters[view] = e.target.value;
+    const caretPos = e.target.selectionStart;
+    const html = renderFn(refFilters[view]);
+    document.getElementById('content').innerHTML = html;
+    applyPtVisibility();
+    wireCurrentRefFilter();
+    const newInput = document.getElementById(inputId);
+    if(newInput){
+      newInput.focus();
+      newInput.setSelectionRange(caretPos, caretPos);
+    }
+  });
+}
+
+function wireCurrentRefFilter(){
+  if(currentView==='irregular-verbs') wireRefFilter('irregular-verbs','verbFilterInput', renderIrregularVerbs);
+  if(currentView==='phrasal-verbs') wireRefFilter('phrasal-verbs','pvFilterInput', renderPhrasalVerbs);
+  if(currentView==='collocations') wireRefFilter('collocations','collocFilterInput', renderCollocations);
+}
 /* ---------- SEARCH ---------- */
 function searchTopics(query){
   query = query.toLowerCase().trim();
@@ -285,13 +461,20 @@ function render(){
     content.innerHTML = renderPractice();
   } else if(currentView==='exams'){
     content.innerHTML = renderExams();
+  } else if(currentView==='irregular-verbs'){
+    content.innerHTML = renderIrregularVerbs(refFilters['irregular-verbs']);
+  } else if(currentView==='phrasal-verbs'){
+    content.innerHTML = renderPhrasalVerbs(refFilters['phrasal-verbs']);
+  } else if(currentView==='collocations'){
+    content.innerHTML = renderCollocations(refFilters['collocations']);
   } else {
     const g = ALL_GROUPS.find(x=>x.id===currentView);
     content.innerHTML = g ? renderGroupPage(g) : renderOverview();
   }
-  content.innerHTML += `<footer class="end">— End of Section · English-System v1 · Roadmap made by: Igor Moreira —</footer>`;
+  content.innerHTML += `<footer class="end">— end of section · english-system v1 —</footer>`;
   applyPtVisibility();
   updateProgress();
+  wireCurrentRefFilter();
 }
 
 function applyPtVisibility(){

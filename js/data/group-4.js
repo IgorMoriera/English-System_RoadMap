@@ -18,9 +18,9 @@ const GROUP_4 = {
         {tag:"non-def", val:"Noun, [who/which + clause], <span class='slot'>[commas — extra info, can be removed]</span>"}
       ],
       examples:[
-        {en:"The developer who built the bot used FastAPI.", pt:"O desenvolvedor que construiu o bot usou FastAPI."},
-        {en:"The store, which will sell imported energy drinks, opens next year.", pt:"A loja, que vai vender energéticos importados, abre no ano que vem."},
-        {en:"Resende, where I live, is between São Paulo and Rio.", pt:"Resende, onde eu moro, fica entre São Paulo e Rio."}
+        {en:"The developer who built the app used a modern framework.", pt:"O desenvolvedor que construiu o app usou um framework moderno."},
+        {en:"The store, which will sell imported goods, opens next year.", pt:"A loja, que vai vender produtos importados, abre no ano que vem."},
+        {en:"The town where I grew up is two hours from the capital.", pt:"A cidade onde eu cresci fica a duas horas da capital."}
       ],
       compare:{
         en:"Defining clauses (no commas) = essential, restrictive info (changes WHICH noun you mean). Non-defining (with commas) = extra info, removable.",
@@ -44,9 +44,9 @@ const GROUP_4 = {
         {tag:"question", val:"\"Where do you live?\" → He asked where I lived. <span class='slot'>[no question word order, no '?']</span>"}
       ],
       examples:[
-        {en:"He said he was testing the bot with a small group.", pt:"Ele disse que estava testando o bot com um grupo pequeno."},
+        {en:"He said he was testing the product with a small group.", pt:"Ele disse que estava testando o produto com um grupo pequeno."},
         {en:"She told me she would launch the store next year.", pt:"Ela me disse que ia lançar a loja no ano que vem."},
-        {en:"They asked if I had used AWS before.", pt:"Eles perguntaram se eu já tinha usado AWS antes."}
+        {en:"They asked if I had used that software before.", pt:"Eles perguntaram se eu já tinha usado aquele programa antes."}
       ],
       compare:{
         en:"Reported questions DROP the question word order — 'He asked where I lived', NOT 'He asked where did I live'. This is the #1 error even at advanced levels.",
@@ -72,8 +72,8 @@ const GROUP_4 = {
       examples:[
         {en:"I enjoy building products from scratch.", pt:"Eu gosto de construir produtos do zero."},
         {en:"I decided to register the company before launching.", pt:"Eu decidi registrar a empresa antes de lançar."},
-        {en:"I stopped testing the bot at midnight. (= quit testing)", pt:"Eu parei de testar o bot à meia-noite. (= parei de fazer)"},
-        {en:"I stopped to check the AWS billing dashboard. (= paused to do this)", pt:"Eu parei para checar o painel de cobrança da AWS. (= pausei pra fazer isso)"}
+        {en:"I stopped studying at midnight. (= quit studying)", pt:"Eu parei de estudar à meia-noite. (= parei de fazer)"},
+        {en:"I stopped to check my email. (= paused to do this)", pt:"Eu parei para checar meu email. (= pausei pra fazer isso)"}
       ],
       compare:{
         en:"'Remember to do' (don't forget, future-oriented) vs 'remember doing' (recall a memory, past-oriented) is a classic meaning-shift pair worth memorizing precisely.",
@@ -95,8 +95,8 @@ const GROUP_4 = {
         {tag:"negative", val:"Negative statement + positive tag <span class='slot'>[You aren't coding, are you?]</span>"}
       ],
       examples:[
-        {en:"You've tested the bot already, haven't you?", pt:"Você já testou o bot, não foi?"},
-        {en:"This isn't approved by ANVISA yet, is it?", pt:"Isso ainda não foi aprovado pela ANVISA, foi?"},
+        {en:"You've tested the product already, haven't you?", pt:"Você já testou o produto, não foi?"},
+        {en:"This isn't approved by the regulator yet, is it?", pt:"Isso ainda não foi aprovado pelo órgão regulador, foi?"},
         {en:"You can speak English, can't you?", pt:"Você sabe falar inglês, não é?"}
       ],
       compare:{
@@ -118,8 +118,8 @@ const GROUP_4 = {
         {tag:"struct", val:"Subject + suggest/recommend/insist + that + Subject + V(base) <span class='slot'>[no -s, even with he/she]</span>"}
       ],
       examples:[
-        {en:"I suggest that he test the chatbot with more users before launch.", pt:"Eu sugiro que ele teste o chatbot com mais usuários antes do lançamento."},
-        {en:"The lawyer recommended that the company register before importing.", pt:"O advogado recomendou que a empresa se registrasse antes de importar."}
+        {en:"I suggest that he test the product with more users before launch.", pt:"Eu sugiro que ele teste o produto com mais usuários antes do lançamento."},
+        {en:"The lawyer recommended that the company register before trading.", pt:"O advogado recomendou que a empresa se registrasse antes de negociar."}
       ],
       compare:{
         en:"This breaks the normal 3rd-person -s rule on purpose — 'he test' (not 'he tests') is correct here, signaling a hypothetical/desired action, not a fact.",
@@ -144,9 +144,9 @@ const GROUP_4 = {
         {tag:"equal", val:"as + Adjective + as <span class='slot'>[as fast as]</span>"}
       ],
       examples:[
-        {en:"Groq is faster than OpenAI for this use case.", pt:"Groq é mais rápido que OpenAI pra esse caso de uso."},
-        {en:"This is the most expensive flavor in the catalog.", pt:"Esse é o sabor mais caro do catálogo."},
-        {en:"The MVP isn't as complete as the final version.", pt:"O MVP não é tão completo quanto a versão final."}
+        {en:"This option is faster than the other one for this use case.", pt:"Essa opção é mais rápida que a outra pra esse caso de uso."},
+        {en:"This is the most expensive item in the catalog.", pt:"Esse é o item mais caro do catálogo."},
+        {en:"This draft isn't as complete as the final version.", pt:"Esse rascunho não é tão completo quanto a versão final."}
       ],
       compare:{
         en:"Good→better→best and bad→worse→worst are irregular — they don't follow the -er/-est or more/most pattern at all, just like 'bom/melhor/ótimo' in Portuguese also breaks pattern.",

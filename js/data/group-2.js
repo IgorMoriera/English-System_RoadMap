@@ -40,8 +40,8 @@ const GROUP_2 = {
         {tag:"struct", val:"If + Subject + Present Simple, Subject + will + V(base)"}
       ],
       examples:[
-        {en:"If ANVISA approves the import, we will launch the new flavors.", pt:"Se a ANVISA aprovar a importação, vamos lançar os novos sabores."},
-        {en:"If the bot doesn't classify the expense correctly, the user will get confused.", pt:"Se o bot não classificar a despesa corretamente, o usuário vai ficar confuso."}
+        {en:"If the manager approves the budget, we will launch the new product.", pt:"Se o gerente aprovar o orçamento, vamos lançar o novo produto."},
+        {en:"If the system doesn't process the data correctly, the user will get confused.", pt:"Se o sistema não processar os dados corretamente, o usuário vai ficar confuso."}
       ],
       compare:{
         en:"The 'if' clause always uses Present Simple even though it's about the future — this is a fixed rule with no exceptions.",
@@ -63,8 +63,8 @@ const GROUP_2 = {
         {tag:"note", val:"with 'be': always use 'were', even with I/he/she ('If I were you...')"}
       ],
       examples:[
-        {en:"If I had more capital, I would import more global flavors.", pt:"Se eu tivesse mais capital, eu importaria mais sabores globais."},
-        {en:"If I were you, I would test the chatbot with a larger group first.", pt:"Se eu fosse você, testaria o chatbot com um grupo maior primeiro."}
+        {en:"If I had more capital, I would invest in more projects.", pt:"Se eu tivesse mais capital, eu investiria em mais projetos."},
+        {en:"If I were you, I would test the product with a larger group first.", pt:"Se eu fosse você, testaria o produto com um grupo maior primeiro."}
       ],
       compare:{
         en:"Uses Past Simple form but does NOT refer to the past — it signals 'unreal/hypothetical', not time. This decoupling of form and meaning is what confuses logical thinkers most.",
@@ -86,11 +86,11 @@ const GROUP_2 = {
       ],
       examples:[
         {en:"If I had validated demand earlier, I would have saved months of work on the MIT project.", pt:"Se eu tivesse validado a demanda antes, eu teria economizado meses de trabalho no projeto MIT."},
-        {en:"If she hadn't tested on AWS Free Tier, the project would have cost much more.", pt:"Se ela não tivesse testado no AWS Free Tier, o projeto teria custado muito mais."}
+        {en:"If she hadn't tested with the free version first, the project would have cost much more.", pt:"Se ela não tivesse testado com a versão gratuita primeiro, o projeto teria custado muito mais."}
       ],
       compare:{
         en:"This is the most complex conditional grammatically, but logically it's simple: take Past Perfect (already 'past of the past') and pair it with 'would have' for the imaginary result.",
-        pt:"É o condicional gramaticalmente mais complexo, mas logicamente simples: pega o Past Perfect (já o 'passado do passado') e combina com 'would have' pro resultado imaginário. Pra engenheiro: é uma função que opera sobre um estado que nunca existiu de verdade."
+        pt:"É o condicional gramaticalmente mais complexo, mas logicamente simples: pega o Past Perfect (já o 'passado do passado') e combina com 'would have' pro resultado imaginário. Pense nisso como uma operação sobre um estado que nunca existiu de verdade."
       },
       warn_en:"Mistake: mixing up 'would have' with 'had' — they're not interchangeable. The if-clause always uses 'had + V3', the result clause uses 'would have + V3'.",
       warn_pt:"Erro: trocar 'would have' por 'had' — não são intercambiáveis. A cláusula com 'if' sempre usa 'had + V3', a cláusula de resultado usa 'would have + V3'."
@@ -122,7 +122,7 @@ const GROUP_2 = {
       tag:"be + V3 (all tenses)",
       logic_en:"Shifts focus from WHO does the action to WHAT receives the action. Used when the agent is unknown, unimportant, obvious, or when you want to sound formal/objective — common in technical, scientific, and academic writing.",
       logic_pt:"Muda o foco de QUEM faz a ação para O QUE recebe a ação. Usado quando o agente é desconhecido, irrelevante, óbvio, ou quando você quer parecer formal/objetivo — comum em texto técnico, científico e acadêmico.",
-      when_en:"1) Agent unknown/unimportant (The bug was fixed) 2) Formal/scientific writing (The data was collected over 6 months) 3) Process descriptions (The app is deployed using Docker) 4) Emphasizing the object over the subject",
+      when_en:"1) Agent unknown/unimportant (The problem was fixed) 2) Formal/scientific writing (The data was collected over 6 months) 3) Process descriptions (The software is installed automatically) 4) Emphasizing the object over the subject",
       when_pt:"1) Agente desconhecido/irrelevante 2) Texto formal/científico 3) Descrição de processos 4) Enfatizar o objeto em vez do sujeito — muito útil pro IELTS Writing Task 1 (descrição de processos/diagramas)",
       formulas:[
         {tag:"struct", val:"Object + be(tense) + V3 + (by + Agent)"},
@@ -132,9 +132,9 @@ const GROUP_2 = {
         {tag:"perfect", val:"The report has been written (by her)"}
       ],
       examples:[
-        {en:"The product catalog was built from official brand sources.", pt:"O catálogo de produtos foi construído a partir de fontes oficiais das marcas."},
-        {en:"The bot is hosted on AWS EC2 using Docker Compose.", pt:"O bot é hospedado na AWS EC2 usando Docker Compose."},
-        {en:"Imported flavors must be verified by ANVISA before being sold.", pt:"Sabores importados devem ser verificados pela ANVISA antes de serem vendidos."}
+        {en:"The report was built from official government sources.", pt:"O relatório foi construído a partir de fontes oficiais do governo."},
+        {en:"The website is hosted on a cloud server.", pt:"O site é hospedado em um servidor na nuvem."},
+        {en:"Imported products must be verified by customs before being sold.", pt:"Produtos importados devem ser verificados pela alfândega antes de serem vendidos."}
       ],
       compare:{
         en:"The passive voice keeps the SAME tense logic as active voice — only the structure changes (object moves to subject position, verb becomes 'be + V3').",

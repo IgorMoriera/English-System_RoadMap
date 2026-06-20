@@ -21,7 +21,7 @@ const GROUP_3 = {
       examples:[
         {en:"I can build a full-stack app from scratch.", pt:"Eu consigo construir um app full-stack do zero."},
         {en:"I couldn't find official sources for that flavor.", pt:"Eu não consegui achar fontes oficiais pra esse sabor."},
-        {en:"I'll be able to import that product once ANVISA approves it.", pt:"Eu vou conseguir importar esse produto quando a ANVISA aprovar."}
+        {en:"I'll be able to launch that product once the budget is approved.", pt:"Eu vou conseguir lançar esse produto quando o orçamento for aprovado."}
       ],
       compare:{
         en:"'Can' has no future or perfect form — English plugs the gap with 'be able to'. There's no such thing as 'will can'.",
@@ -44,13 +44,13 @@ const GROUP_3 = {
         {tag:"mid", val:"Subject + might/may/could + V(base) <span class='slot'>[~40-60% certain]</span>"}
       ],
       examples:[
-        {en:"The deploy failed — there must be an error in the Docker config.", pt:"O deploy falhou — deve ter um erro na configuração do Docker."},
-        {en:"He can't be using AWS Free Tier with that much traffic — it'd hit the limits.", pt:"Ele não pode estar usando o AWS Free Tier com esse tráfego — ia bater no limite."},
-        {en:"This flavor might be approved by ANVISA next quarter.", pt:"Esse sabor pode ser aprovado pela ANVISA no próximo trimestre."}
+        {en:"The system crashed — there must be an error in the configuration.", pt:"O sistema travou — deve ter um erro na configuração."},
+        {en:"He can't be using the free plan with that much traffic — it'd hit the limits.", pt:"Ele não pode estar usando o plano gratuito com esse tráfego — ia bater no limite."},
+        {en:"This product might be approved by the regulator next quarter.", pt:"Esse produto pode ser aprovado pelo órgão regulador no próximo trimestre."}
       ],
       compare:{
         en:"Think of this as a probability scale: must (0.95) > might/may/could (0.5) > can't (0.05, but stated as certainty of the negative).",
-        pt:"Pense nisso como uma escala de probabilidade: must (0.95) > might/may/could (0.5) > can't (0.05, mas dito como certeza do negativo). Útil pra engenheiro pensar em termos de confidence level."
+        pt:"Pense nisso como uma escala de probabilidade: must (0.95) > might/may/could (0.5) > can't (0.05, mas dito como certeza do negativo). Útil pensar em termos de nível de confiança."
       },
       warn_en:"Mistake: using 'mustn't' to mean 'probably not' — 'mustn't' actually means PROHIBITION (you must not do X), not deduction. For negative deduction, use 'can't'.",
       warn_pt:"Erro: usar 'mustn't' pra dizer 'provavelmente não' — 'mustn't' na verdade significa PROIBIÇÃO, não dedução. Pra dedução negativa, use 'can't'."
@@ -71,7 +71,7 @@ const GROUP_3 = {
       ],
       examples:[
         {en:"You have to register your business before opening the store — it's the law.", pt:"Você tem que registrar sua empresa antes de abrir a loja — é a lei."},
-        {en:"I must finish the catalog by Friday — I set that deadline myself.", pt:"Eu tenho que terminar o catálogo até sexta — eu mesmo decidi esse prazo."},
+        {en:"I must finish the report by Friday — I set that deadline myself.", pt:"Eu tenho que terminar o relatório até sexta — eu mesmo decidi esse prazo."},
         {en:"You should validate demand before importing in bulk.", pt:"Você deveria validar a demanda antes de importar em grande quantidade."}
       ],
       compare:{
@@ -95,8 +95,8 @@ const GROUP_3 = {
         {tag:"had better", val:"Subject + had better (not) + V(base) <span class='slot'>[stronger, implies consequence]</span>"}
       ],
       examples:[
-        {en:"You should test the chatbot with more users before scaling.", pt:"Você deveria testar o chatbot com mais usuários antes de escalar."},
-        {en:"We'd better confirm the ANVISA requirements before placing the import order.", pt:"É melhor confirmarmos os requisitos da ANVISA antes de fazer o pedido de importação."}
+        {en:"You should test the product with more users before scaling.", pt:"Você deveria testar o produto com mais usuários antes de escalar."},
+        {en:"We'd better confirm the legal requirements before placing the order.", pt:"É melhor confirmarmos os requisitos legais antes de fazer o pedido."}
       ],
       compare:{
         en:"'Had better' sounds stronger and more urgent than 'should' — almost a warning, not just friendly advice.",

@@ -19,7 +19,7 @@ const GROUP_6 = {
         {tag:"general", val:"(no article) + Noun(plural/abstract)"}
       ],
       examples:[
-        {en:"I built a chatbot. The chatbot uses Groq's API.", pt:"Eu construí um chatbot. O chatbot usa a API da Groq."},
+        {en:"I built an app. The app uses a weather API.", pt:"Eu construí um app. O app usa uma API de previsão do tempo."},
         {en:"Brazil has strict import regulations.", pt:"O Brasil tem regulamentações de importação estritas."},
         {en:"Entrepreneurs often underestimate regulatory complexity.", pt:"Empreendedores costumam subestimar a complexidade regulatória."}
       ],
@@ -44,9 +44,9 @@ const GROUP_6 = {
         {tag:"both", val:"a lot of / lots of / some / any + either type"}
       ],
       examples:[
-        {en:"I don't have much information about ANVISA's exact timeline.", pt:"Eu não tenho muita informação sobre o prazo exato da ANVISA."},
-        {en:"I received a lot of feedback on the bot's first version.", pt:"Eu recebi muito feedback sobre a primeira versão do bot."},
-        {en:"There are many suppliers, but few offer official documentation.", pt:"Existem muitos fornecedores, mas poucos oferecem documentação oficial."}
+        {en:"I don't have much information about the exact timeline.", pt:"Eu não tenho muita informação sobre o prazo exato."},
+        {en:"I received a lot of feedback on my presentation.", pt:"Eu recebi muito feedback sobre minha apresentação."},
+        {en:"There are many candidates, but few have the required experience.", pt:"Existem muitos candidatos, mas poucos têm a experiência necessária."}
       ],
       compare:{
         en:"'Advice', 'information', 'feedback' are ALWAYS singular/uncountable in English — 'an advice' or 'informations' are common Brazilian errors with no English equivalent.",
@@ -86,7 +86,7 @@ const GROUP_6 = {
       tag:"some/any, all/none, every/each",
       logic_en:"Specifies quantity without an exact number — like boolean/range logic for amounts. 'Some' = positive statements, 'any' = questions/negatives, 'no' = zero quantity, 'every/each' = all members of a group, considered individually or collectively.",
       logic_pt:"Especifica quantidade sem número exato — como lógica booleana/de intervalo pra quantidades. 'Some' = afirmações positivas, 'any' = perguntas/negativas, 'no' = quantidade zero, 'every/each' = todos os membros de um grupo, considerados individual ou coletivamente.",
-      when_en:"Some (affirmative: I have some questions), any (questions/negative: Do you have any questions? / I don't have any), every (group as a whole: Every supplier needs documentation), each (group members individually: Each product has its own registration).",
+      when_en:"Some (affirmative: I have some questions), any (questions/negative: Do you have any questions? / I don't have any), every (group as a whole: Every employee needs a badge), each (group members individually: Each product has its own registration).",
       when_pt:"Some (afirmativo), any (perguntas/negativo), every (grupo como um todo), each (membros do grupo individualmente).",
       formulas:[
         {tag:"affirm", val:"some + Noun"},
@@ -95,16 +95,16 @@ const GROUP_6 = {
         {tag:"individually", val:"each + Singular Noun"}
       ],
       examples:[
-        {en:"Do you have any updates on the ANVISA approval?", pt:"Você tem alguma atualização sobre a aprovação da ANVISA?"},
-        {en:"Every imported flavor needs official documentation.", pt:"Todo sabor importado precisa de documentação oficial."},
+        {en:"Do you have any updates on the project approval?", pt:"Você tem alguma atualização sobre a aprovação do projeto?"},
+        {en:"Every imported item needs official documentation.", pt:"Todo item importado precisa de documentação oficial."},
         {en:"Each product in the catalog was verified individually.", pt:"Cada produto no catálogo foi verificado individualmente."}
       ],
       compare:{
         en:"'Some' can appear in questions when offering/requesting (Would you like some coffee?) — this is an exception to the 'any in questions' rule, based on politeness, not grammar logic.",
         pt:"'Some' pode aparecer em perguntas quando se está oferecendo/pedindo algo (Would you like some coffee?) — é uma exceção à regra de 'any em perguntas', baseada em educação, não lógica gramatical pura."
       },
-      warn_en:"Mistake: 'every' is always followed by SINGULAR noun + singular verb ('Every supplier needs', not 'Every suppliers need').",
-      warn_pt:"Erro: 'every' é sempre seguido de substantivo SINGULAR + verbo singular ('Every supplier needs', não 'Every suppliers need')."
+      warn_en:"Mistake: 'every' is always followed by SINGULAR noun + singular verb ('Every employee needs', not 'Every employees need').",
+      warn_pt:"Erro: 'every' é sempre seguido de substantivo SINGULAR + verbo singular ('Every employee needs', não 'Every employees need')."
     }
   ]
 };

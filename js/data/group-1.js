@@ -20,9 +20,9 @@ const GROUP_1 = {
         {tag:"interr", val:"Do/Does + Subject + V(base) ?"}
       ],
       examples:[
-        {en:"I work at a startup.", pt:"Eu trabalho em uma startup."},
+        {en:"I work in marketing.", pt:"Eu trabalho em marketing."},
         {en:"She doesn't drink coffee.", pt:"Ela não bebe café."},
-        {en:"Does the API return JSON?", pt:"A API retorna JSON?"},
+        {en:"Does the store open on Sundays?", pt:"A loja abre nos domingos?"},
         {en:"Water boils at 100 degrees.", pt:"A água ferve a 100 graus."}
       ],
       compare:{
@@ -46,10 +46,10 @@ const GROUP_1 = {
         {tag:"interr", val:"Am/Is/Are + Subject + V-ing ?"}
       ],
       examples:[
-        {en:"I'm building a Telegram bot right now.", pt:"Estou construindo um bot do Telegram agora."},
+        {en:"I'm writing a report right now.", pt:"Estou escrevendo um relatório agora."},
         {en:"She isn't working today.", pt:"Ela não está trabalhando hoje."},
-        {en:"Are you using AWS Free Tier?", pt:"Você está usando o AWS Free Tier?"},
-        {en:"The energy drink market is growing in Brazil.", pt:"O mercado de energéticos está crescendo no Brasil."}
+        {en:"Are you using the free version of this software?", pt:"Você está usando a versão gratuita desse software?"},
+        {en:"The renewable energy market is growing fast.", pt:"O mercado de energia renovável está crescendo rápido."}
       ],
       compare:{
         en:"English strictly separates 'happening now' (Continuous) from 'general fact' (Simple): 'I work' ≠ 'I'm working'.",
@@ -74,8 +74,8 @@ const GROUP_1 = {
       examples:[
         {en:"I have built three projects this year.", pt:"Eu construí três projetos este ano."},
         {en:"She hasn't finished the deployment yet.", pt:"Ela ainda não terminou o deploy."},
-        {en:"Have you ever used Docker Compose?", pt:"Você já usou Docker Compose alguma vez?"},
-        {en:"I've lived in Resende for 10 years.", pt:"Eu moro em Resende há 10 anos."}
+        {en:"Have you ever used this kind of software before?", pt:"Você já usou esse tipo de programa antes?"},
+        {en:"I've lived in this city for 10 years.", pt:"Eu moro nessa cidade há 10 anos."}
       ],
       compare:{
         en:"Present Perfect connects past action to present relevance, with NO specific past time mentioned. 'I have finished' = relevant now, time unspecified.",
@@ -98,13 +98,13 @@ const GROUP_1 = {
         {tag:"interr", val:"Have/Has + Subject + been + V-ing ?"}
       ],
       examples:[
-        {en:"I've been working on this bot for three months.", pt:"Eu venho trabalhando neste bot há três meses."},
+        {en:"I've been learning Spanish for three months.", pt:"Eu venho aprendendo espanhol há três meses."},
         {en:"She hasn't been sleeping well lately.", pt:"Ela não tem dormido bem ultimamente."},
         {en:"Have you been studying English every day?", pt:"Você tem estudado inglês todos os dias?"}
       ],
       compare:{
         en:"Present Perfect Continuous stresses the ongoing PROCESS ('I've been working' = the act of working, in progress). Present Perfect stresses the RESULT/fact ('I've worked' = it happened, done).",
-        pt:"Em português usamos 'venho fazendo' ou 'tenho feito' pras duas ideias — em inglês a escolha entre Perfect e Perfect Continuous é sobre processo vs. resultado, algo que você, como engenheiro, pode pensar como 'log de execução em andamento' vs 'status: completo'."
+        pt:"Em português usamos 'venho fazendo' ou 'tenho feito' pras duas ideias — em inglês a escolha entre Perfect e Perfect Continuous é sobre processo vs. resultado: pense como a diferença entre um processo 'em execução' e um processo com 'status: completo'."
       },
       warn_en:"Mistake: using this with stative verbs (know, believe, want) — 'I've been knowing him' is wrong; say 'I've known him for years' (Present Perfect, no -ing).",
       warn_pt:"Erro: usar isso com verbos de estado — 'I've been knowing him' está errado; o certo é 'I've known him for years' (Present Perfect simples, sem -ing)."
@@ -123,9 +123,9 @@ const GROUP_1 = {
         {tag:"interr", val:"Did + Subject + V(base) ?"}
       ],
       examples:[
-        {en:"I deployed the bot on AWS last week.", pt:"Eu fiz o deploy do bot na AWS na semana passada."},
-        {en:"She didn't test the API before launching.", pt:"Ela não testou a API antes de lançar."},
-        {en:"Did you use Groq or OpenAI for the LLM?", pt:"Você usou Groq ou OpenAI para o LLM?"}
+        {en:"I finished the project last week.", pt:"Eu terminei o projeto na semana passada."},
+        {en:"She didn't check the weather before leaving.", pt:"Ela não checou o tempo antes de sair."},
+        {en:"Did you use Excel or Google Sheets for the report?", pt:"Você usou Excel ou Google Sheets para o relatório?"}
       ],
       compare:{
         en:"English has two distinct past forms: V2 for affirmative ('I worked'), but BASE form after 'did' in negative/question ('did you work', not 'did you worked'). This trips up almost every learner.",
@@ -140,7 +140,7 @@ const GROUP_1 = {
       tag:"Continuous · Past",
       logic_en:"An action in progress at a specific moment in the past — often interrupted by another action (Past Simple), or two parallel actions happening at the same time in the past.",
       logic_pt:"Uma ação em progresso em um momento específico do passado — geralmente interrompida por outra ação (Past Simple), ou duas ações paralelas acontecendo ao mesmo tempo no passado.",
-      when_en:"1) Background action interrupted by a shorter one (I was coding when the power went out) 2) Two simultaneous past actions (I was testing while she was writing docs) 3) Setting a scene in a story",
+      when_en:"1) Background action interrupted by a shorter one (I was cooking when the power went out) 2) Two simultaneous past actions (I was reading while she was writing) 3) Setting a scene in a story",
       when_pt:"1) Ação de fundo interrompida por outra mais curta 2) Duas ações simultâneas no passado 3) Descrever cenário em uma narrativa",
       formulas:[
         {tag:"afirm", val:"Subject + was/were + V-ing"},
@@ -148,8 +148,8 @@ const GROUP_1 = {
         {tag:"interr", val:"Was/Were + Subject + V-ing ?"}
       ],
       examples:[
-        {en:"I was debugging the code when the client called.", pt:"Eu estava debugando o código quando o cliente ligou."},
-        {en:"They weren't testing the chatbot at that time.", pt:"Eles não estavam testando o chatbot naquele momento."},
+        {en:"I was cooking dinner when the phone rang.", pt:"Eu estava cozinhando o jantar quando o telefone tocou."},
+        {en:"They weren't paying attention at that time.", pt:"Eles não estavam prestando atenção naquele momento."},
         {en:"What were you doing at 9pm last night?", pt:"O que você estava fazendo às 21h ontem?"}
       ],
       compare:{
@@ -165,7 +165,7 @@ const GROUP_1 = {
       tag:"Perfect · Past",
       logic_en:"The 'past of the past' — an action completed BEFORE another past action or point in time. It establishes a clear sequence: this happened, then that happened.",
       logic_pt:"O 'passado do passado' — uma ação completada ANTES de outra ação ou ponto no passado. Estabelece uma sequência clara: isso aconteceu, depois aquilo aconteceu.",
-      when_en:"1) Action completed before another past action (I had finished the report before she arrived) 2) The earlier of two past events, to avoid ambiguity 3) Common in reported speech and storytelling",
+      when_en:"1) Action completed before another past action (I had finished dinner before she arrived) 2) The earlier of two past events, to avoid ambiguity 3) Common in reported speech and storytelling",
       when_pt:"1) Ação completada antes de outra ação passada 2) O evento mais antigo entre dois eventos passados, pra evitar ambiguidade 3) Comum em discurso indireto e narrativas",
       formulas:[
         {tag:"afirm", val:"Subject + had + V3"},
@@ -173,9 +173,9 @@ const GROUP_1 = {
         {tag:"interr", val:"Had + Subject + V3 ?"}
       ],
       examples:[
-        {en:"I had already deployed the app before the meeting started.", pt:"Eu já tinha feito o deploy do app antes da reunião começar."},
-        {en:"She hadn't tested the database before the demo.", pt:"Ela não tinha testado o banco de dados antes da demo."},
-        {en:"Had you used PostgreSQL before this project?", pt:"Você já tinha usado PostgreSQL antes deste projeto?"}
+        {en:"I had already eaten before the meeting started.", pt:"Eu já tinha comido antes da reunião começar."},
+        {en:"She hadn't read the contract before signing it.", pt:"Ela não tinha lido o contrato antes de assiná-lo."},
+        {en:"Had you visited that country before this trip?", pt:"Você já tinha visitado esse país antes desta viagem?"}
       ],
       compare:{
         en:"Past Perfect requires a clear reference point in the past to make sense: it's always relative to another past moment.",
@@ -190,7 +190,7 @@ const GROUP_1 = {
       tag:"Perfect Continuous · Past",
       logic_en:"Emphasizes the DURATION of an action that was ongoing before another past point — 'how long something had been happening' before something else occurred.",
       logic_pt:"Enfatiza a DURAÇÃO de uma ação que estava em andamento antes de outro ponto no passado — 'há quanto tempo algo estava acontecendo' antes de outra coisa ocorrer.",
-      when_en:"1) Duration before another past event (I had been coding for 4 hours before I found the bug) 2) Cause of a past situation (He was tired because he had been working all night)",
+      when_en:"1) Duration before another past event (I had been studying for 4 hours before I took a break) 2) Cause of a past situation (He was tired because he had been working all night)",
       when_pt:"1) Duração antes de outro evento passado 2) Causa de uma situação passada",
       formulas:[
         {tag:"afirm", val:"Subject + had + been + V-ing"},
@@ -198,8 +198,8 @@ const GROUP_1 = {
         {tag:"interr", val:"Had + Subject + been + V-ing ?"}
       ],
       examples:[
-        {en:"I had been testing the bot for hours before it finally worked.", pt:"Eu vinha testando o bot por horas antes de finalmente funcionar."},
-        {en:"She was exhausted because she had been working all night on the catalog.", pt:"Ela estava exausta porque tinha passado a noite trabalhando no catálogo."}
+        {en:"I had been waiting for hours before the bus finally arrived.", pt:"Eu vinha esperando por horas antes do ônibus finalmente chegar."},
+        {en:"She was exhausted because she had been studying all night for the exam.", pt:"Ela estava exausta porque tinha passado a noite estudando para a prova."}
       ],
       compare:{
         en:"This is the least common tense in real speech — used mainly to explain WHY a past situation happened, via duration leading up to it.",
@@ -222,9 +222,9 @@ const GROUP_1 = {
         {tag:"interr", val:"Will + Subject + V(base) ?"}
       ],
       examples:[
-        {en:"I think this feature will increase user retention.", pt:"Eu acho que essa funcionalidade vai aumentar a retenção de usuários."},
-        {en:"I won't launch the store without ANVISA approval.", pt:"Eu não vou lançar a loja sem aprovação da ANVISA."},
-        {en:"Will the API handle concurrent requests?", pt:"A API vai aguentar requisições concorrentes?"}
+        {en:"I think this change will make a big difference.", pt:"Eu acho que essa mudança vai fazer muita diferença."},
+        {en:"I won't make a decision without thinking it through first.", pt:"Eu não vou tomar uma decisão sem pensar bem primeiro."},
+        {en:"Will the new policy affect everyone equally?", pt:"A nova política vai afetar todo mundo igualmente?"}
       ],
       compare:{
         en:"'Will' = decided NOW, in the moment, or a general prediction with no plan behind it.",
@@ -239,7 +239,7 @@ const GROUP_1 = {
       tag:"Simple · Future (planned)",
       logic_en:"Used for intentions/plans decided BEFORE the moment of speaking, and predictions based on present evidence (something you can see/observe now).",
       logic_pt:"Usado para intenções/planos decididos ANTES do momento da fala, e previsões baseadas em evidência presente (algo que você pode ver/observar agora).",
-      when_en:"1) Pre-decided plan (I'm going to open the store in Resende next year) 2) Prediction with visible evidence (Look at those clouds — it's going to rain)",
+      when_en:"1) Pre-decided plan (I'm going to open a business next year) 2) Prediction with visible evidence (Look at those clouds — it's going to rain)",
       when_pt:"1) Plano decidido antes de falar 2) Previsão com evidência visível no momento",
       formulas:[
         {tag:"afirm", val:"Subject + am/is/are + going to + V(base)"},
@@ -248,12 +248,12 @@ const GROUP_1 = {
       ],
       examples:[
         {en:"I'm going to register the company before opening the store.", pt:"Eu vou registrar a empresa antes de abrir a loja."},
-        {en:"She isn't going to import that flavor without checking ANVISA first.", pt:"Ela não vai importar esse sabor sem checar a ANVISA antes."},
-        {en:"Are you going to test the bot with real users?", pt:"Você vai testar o bot com usuários reais?"}
+        {en:"She isn't going to sign the contract without checking the terms first.", pt:"Ela não vai assinar o contrato sem checar os termos antes."},
+        {en:"Are you going to invite her to the party?", pt:"Você vai convidar ela para a festa?"}
       ],
       compare:{
         en:"'Going to' implies a decision already made — there's a plan behind it, even if informal.",
-        pt:"Pense em 'will' como uma função executada em runtime (decidida agora) e 'going to' como uma função já no código, esperando ser chamada (decidida antes) — analogia útil pra engenheiro."
+        pt:"Pense em 'will' como uma decisão tomada na hora, no momento em que você fala, e 'going to' como uma decisão que já estava 'guardada', esperando o momento certo de ser executada."
       },
       warn_en:"Both 'will' and 'going to' translate to 'vou fazer' in Portuguese — that's exactly why Brazilians mix them up. The test: was the decision made now (will) or before (going to)?",
       warn_pt:"Tanto 'will' quanto 'going to' traduzem pra 'vou fazer' — por isso brasileiro confunde os dois o tempo todo. O teste mental: a decisão foi tomada agora (will) ou antes (going to)?"
@@ -272,8 +272,8 @@ const GROUP_1 = {
         {tag:"interr", val:"Will + Subject + be + V-ing ?"}
       ],
       examples:[
-        {en:"This time tomorrow, I'll be presenting the catalog to suppliers.", pt:"Nessa hora amanhã, eu vou estar apresentando o catálogo aos fornecedores."},
-        {en:"Will you be working on the bot this weekend?", pt:"Você vai estar trabalhando no bot neste fim de semana?"}
+        {en:"This time tomorrow, I'll be presenting the project to the team.", pt:"Nessa hora amanhã, eu vou estar apresentando o projeto para a equipe."},
+        {en:"Will you be using the car this weekend?", pt:"Você vai estar usando o carro neste fim de semana?"}
       ],
       compare:{
         en:"Used less often than other future forms — mostly for emphasizing 'mid-action at a specific future time'.",
@@ -296,7 +296,7 @@ const GROUP_1 = {
         {tag:"interr", val:"Will + Subject + have + V3 ?"}
       ],
       examples:[
-        {en:"By December, I will have finished the full ANVISA registration.", pt:"Até dezembro, eu vou ter terminado todo o registro na ANVISA."},
+        {en:"By December, I will have finished the entire certification process.", pt:"Até dezembro, eu vou ter terminado todo o processo de certificação."},
         {en:"Will you have completed the MVP by then?", pt:"Você vai ter completado o MVP até lá?"}
       ],
       compare:{

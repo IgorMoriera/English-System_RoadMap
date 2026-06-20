@@ -19,7 +19,7 @@ const GROUP_5 = {
       ],
       examples:[
         {en:"The store will sell imported drinks. In addition, it will offer a subscription club.", pt:"A loja vai vender bebidas importadas. Além disso, vai oferecer um clube de assinatura."},
-        {en:"Groq is fast. It's also cost-effective for this use case.", pt:"Groq é rápido. Também é econômico pra esse caso de uso."}
+        {en:"This tool is fast. It's also cost-effective for this use case.", pt:"Essa ferramenta é rápida. Também é econômica pra esse caso de uso."}
       ],
       compare:{
         en:"In academic writing (IELTS Task 2), 'moreover' and 'furthermore' signal you can vary register — using only 'and' throughout caps your Lexical Resource score.",
@@ -44,9 +44,9 @@ const GROUP_5 = {
         {tag:"whereas", val:"Subject + Verb, whereas + Subject + Verb."}
       ],
       examples:[
-        {en:"Although ANVISA approval takes time, it protects the business legally.", pt:"Embora a aprovação da ANVISA demore, ela protege o negócio legalmente."},
-        {en:"Despite the regulatory delays, the catalog is almost ready.", pt:"Apesar dos atrasos regulatórios, o catálogo está quase pronto."},
-        {en:"Layer 1 products are nationally distributed, whereas Layer 2 requires import infrastructure.", pt:"Produtos da Camada 1 são distribuídos nacionalmente, enquanto a Camada 2 exige infraestrutura de importação."}
+        {en:"Although regulatory approval takes time, it protects the business legally.", pt:"Embora a aprovação regulatória demore, ela protege o negócio legalmente."},
+        {en:"Despite the delays, the project is almost ready.", pt:"Apesar dos atrasos, o projeto está quase pronto."},
+        {en:"Basic plans are available everywhere, whereas premium plans require special setup.", pt:"Planos básicos estão disponíveis em todo lugar, enquanto planos premium exigem configuração especial."}
       ],
       compare:{
         en:"'Despite' is followed by a noun phrase or V-ing — NEVER a full clause with subject+verb. 'Despite it rains' is wrong; say 'Despite the rain' or 'Despite raining'.",
@@ -68,8 +68,8 @@ const GROUP_5 = {
         {tag:"result", val:"Cause. Therefore, / As a result, / Consequently, + Result."}
       ],
       examples:[
-        {en:"We chose Groq because it's significantly cheaper than GPT for this volume.", pt:"Escolhemos Groq porque é significativamente mais barato que GPT pra esse volume."},
-        {en:"The product wasn't ANVISA-approved. As a result, we removed it from the catalog.", pt:"O produto não tinha aprovação da ANVISA. Como resultado, nós o removemos do catálogo."}
+        {en:"We chose this supplier because it's significantly cheaper than the alternative for this volume.", pt:"Escolhemos esse fornecedor porque é significativamente mais barato que a alternativa pra esse volume."},
+        {en:"The product wasn't approved by the regulator. As a result, we removed it from the catalog.", pt:"O produto não tinha aprovação do órgão regulador. Como resultado, nós o removemos do catálogo."}
       ],
       compare:{
         en:"'Because of' is followed by a noun, while 'because' is followed by a full clause — a structural distinction many learners blur.",
@@ -90,8 +90,8 @@ const GROUP_5 = {
         {tag:"struct", val:"First, ... Then/Next, ... After that, ... Finally, ..."}
       ],
       examples:[
-        {en:"First, we validate the product on official brand sources. Then, we classify it as Layer 1 or Layer 2.", pt:"Primeiro, validamos o produto em fontes oficiais da marca. Depois, classificamos como Camada 1 ou Camada 2."},
-        {en:"Finally, we submit the import documentation to ANVISA.", pt:"Por fim, enviamos a documentação de importação pra ANVISA."}
+        {en:"First, we validate the product against official sources. Then, we classify it by category.", pt:"Primeiro, validamos o produto em fontes oficiais. Depois, classificamos por categoria."},
+        {en:"Finally, we submit the documentation to the regulator.", pt:"Por fim, enviamos a documentação pro órgão regulador."}
       ],
       compare:{
         en:"This maps almost 1:1 onto pseudocode structure — 'first/then/finally' is literally step 1, step 2, step n. Easy win for a logical thinker.",
