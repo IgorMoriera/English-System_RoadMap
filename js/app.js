@@ -471,7 +471,7 @@ function render(){
     const g = ALL_GROUPS.find(x=>x.id===currentView);
     content.innerHTML = g ? renderGroupPage(g) : renderOverview();
   }
-  content.innerHTML += `<footer class="end">— end of section · english-system v1 —</footer>`;
+  content.innerHTML += `<footer class="end">— End of Section · English-System · Made by: Igor Moreira v1 —</footer>`;
   applyPtVisibility();
   updateProgress();
   wireCurrentRefFilter();
