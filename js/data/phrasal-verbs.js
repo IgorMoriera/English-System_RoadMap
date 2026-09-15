@@ -7,11 +7,10 @@
    get over) em vez de memorizar 100+ itens isolados.
 */
 const PHRASAL_VERBS = {
-  id: "phrasal-verbs",
+  id: "Phrasal Verbs",
   title: "Phrasal Verbs — Tabela de Referência",
   subtitle: "Verbo + partícula(s) → significado, frequentemente não-literal",
-  desc_en: "A phrasal verb combines a verb with one or two particles (up, on, off, out...) to create a new meaning that's often impossible to guess from the individual words. 'Give up' has nothing to do with literally 'giving' anything 'up'. There's no shortcut — these are vocabulary items to memorize, like idioms. Grouping by base verb at least shows which particles tend to pair with which roots.",
-  desc_pt: "Um phrasal verb combina um verbo com uma ou duas partículas (up, on, off, out...) criando um significado novo, geralmente impossível de adivinhar pelas palavras separadas. 'Give up' não tem nada a ver com literalmente 'dar algo para cima'. Não tem atalho — são itens de vocabulário pra memorizar, como expressões idiomáticas. Agrupar pelo verbo-base ao menos mostra quais partículas tendem a combinar com quais raízes.",
+  desc: "A phrasal verb combines a verb with one or two particles (up, on, off, out...) to create a new meaning that's often impossible to guess from the individual words. 'Give up' has nothing to do with literally 'giving' anything 'up'. There's no shortcut — these are vocabulary items to memorize, like idioms. Grouping by base verb at least shows which particles tend to pair with which roots.",
   groups: [
     {
       base: "get",

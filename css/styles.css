@@ -673,3 +673,189 @@ table.colloc-table td.cnote{color:var(--ink-faint);font-size:12px;font-style:ita
   table.verb-table th, table.colloc-table th,
   table.verb-table td, table.colloc-table td{padding:7px 9px;}
 }
+/* ============ PER-CARD TRANSLATE BUTTON & DRAWER ============ */
+
+/* 🌐 button in topic-head */
+.translate-btn{
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: var(--ink-faint);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 2px 7px;
+  line-height: 1.6;
+  transition: border-color .15s, color .15s, background .15s;
+  flex-shrink: 0;
+  user-select: none;
+}
+.translate-btn:hover{
+  border-color: var(--accent-dim);
+  color: var(--ink);
+  background: rgba(255,122,61,0.06);
+}
+.translate-btn.active{
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(255,122,61,0.10);
+}
+
+/* PT drawer — collapsed by default, expands on .pt-open */
+.pt-drawer{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .28s ease, opacity .25s ease;
+  opacity: 0;
+}
+.pt-open .pt-drawer{
+  max-height: 400px;  /* generous upper bound */
+  opacity: 1;
+}
+.pt-drawer-inner{
+  margin-top: 8px;
+  padding: 10px 14px;
+  background: rgba(255,122,61,0.05);
+  border-left: 2px solid var(--accent-dim);
+  border-radius: 0 6px 6px 0;
+  font-size: 13.5px;
+  color: var(--ink-dim);
+  font-style: italic;
+  line-height: 1.6;
+}
+.pt-drawer-inner.warn-pt{
+  background: none;
+  border-left: none;
+  border-top: 1px dashed var(--line);
+  border-radius: 0;
+  padding: 8px 0 0 0;
+  margin-top: 10px;
+}
+
+/* Inline PT translation for examples (sits below EN, collapses with drawer) */
+.ex-pt{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .28s ease, opacity .25s ease;
+  font-style: italic;
+  color: var(--ink-faint);
+  font-size: 13px;
+}
+.pt-open .ex-pt{
+  max-height: 80px;
+  opacity: 1;
+}
+
+/* ref-pattern-note PT (irregular verbs, collocations group notes) */
+.ref-pattern-note.pt{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .28s ease, opacity .25s ease;
+  display: block !important; /* override old show-pt display:block rule */
+}
+/* ref pages don't use per-card logic — keep existing show-pt for them */
+.show-pt .ref-pattern-note.pt{
+  max-height: 200px;
+  opacity: 1;
+}
+
+/* ============ LANGUAGE PICKER ============ */
+.lang-picker{
+  position: relative;
+  flex-shrink: 0;
+}
+.lang-btn{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink-dim);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 7px 11px;
+  transition: border-color .15s, color .15s;
+  white-space: nowrap;
+  user-select: none;
+}
+.lang-btn:hover{
+  border-color: var(--accent-dim);
+  color: var(--ink);
+}
+.lang-picker.open .lang-btn{
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.lang-caret{
+  font-size: 10px;
+  opacity: .7;
+  transition: transform .2s;
+}
+.lang-picker.open .lang-caret{ transform: rotate(180deg); }
+
+.lang-menu{
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 180px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5);
+  z-index: 100;
+  overflow: hidden;
+}
+.lang-picker.open .lang-menu{ display: block; }
+
+.lang-option{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  font-size: 13px;
+  color: var(--ink-dim);
+  cursor: pointer;
+  transition: background .12s, color .12s;
+  user-select: none;
+}
+.lang-option:hover{
+  background: var(--panel-2);
+  color: var(--ink);
+}
+.lang-option + .lang-option{ border-top: 1px solid var(--line); }
+.lang-flag{ font-size: 16px; line-height: 1; }
+
+/* Close dropdown when clicking outside */
+.lang-picker.open::before{
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+
+/* one-col compare-box when no translation available */
+.compare-box.one-col{ grid-template-columns: 1fr; }
+.compare-box.two-col{ grid-template-columns: 1fr 1fr; }
+
+/* translation in examples (below EN line) */
+.ex-pt{
+  color: var(--ink-faint);
+  font-style: italic;
+  font-size: 13px;
+  padding-left: 14px;
+  margin-top: 2px;
+}
+
+/* ref-pattern-note translation */
+.ref-pattern-note.pt{
+  margin-top: 6px;
+  font-style: italic;
+  color: var(--ink-faint);
+  border-left: 2px solid var(--accent-dim);
+  padding-left: 10px;
+}

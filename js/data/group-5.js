@@ -1,132 +1,97 @@
 const GROUP_5 = {
-  id: "g5",
+  id: "Connectors & Discourse",
   num: "05",
-  title: "Conectores e Discurso",
+  title: "Connectors & Discourse",
   level: "intermediate-to-advanced",
-  desc: "Conectores são os 'operadores lógicos' do discurso: AND, OR, BUT, BECAUSE em forma sofisticada. No IELTS, 'Coherence and Cohesion' é um dos 4 critérios de nota — dominar conectores impacta diretamente sua pontuação em Speaking e Writing.",
+  desc: `Connectors are the logical operators of discourse: AND, OR, BUT, BECAUSE in sophisticated form. In IELTS, 'Coherence and Cohesion' is one of the 4 scoring criteria — mastering connectors directly impacts your Speaking and Writing scores.`,
   topics: [
     {
       id:"conn-addition",
-      title:"Adição",
+      title:"Addition",
       tag:"and, also, in addition, moreover",
-      logic_en:"Adds another point to support the same idea — like appending another argument to the same logical thread.",
-      logic_pt:"Adiciona outro ponto pra apoiar a mesma ideia — como anexar outro argumento à mesma linha lógica.",
-      when_en:"Casual: also, too, as well. Formal/written: in addition, furthermore, moreover. Use formal versions in IELTS Writing/Speaking Part 3.",
-      when_pt:"Casual: also, too, as well. Formal/escrito: in addition, furthermore, moreover. Use as versões formais no IELTS Writing/Speaking Part 3.",
+      logic:`Adds another point to support the same idea — like appending another argument to the same logical thread.`,
+      when:`Casual: also, too, as well. Formal/written: in addition, furthermore, moreover. Use formal versions in IELTS Writing/Speaking Part 3.`,
       formulas:[
-        {tag:"casual", val:"Sentence. + Also, / + ..., too."},
-        {tag:"formal", val:"Sentence. + In addition, / Furthermore, / Moreover, + Sentence."}
+        {tag:"casual", val:`Sentence. + Also, / + ..., too.`},
+        {tag:"formal", val:`Sentence. + In addition, / Furthermore, / Moreover, + Sentence.`}
       ],
       examples:[
-        {en:"The store will sell imported drinks. In addition, it will offer a subscription club.", pt:"A loja vai vender bebidas importadas. Além disso, vai oferecer um clube de assinatura."},
-        {en:"This tool is fast. It's also cost-effective for this use case.", pt:"Essa ferramenta é rápida. Também é econômica pra esse caso de uso."}
+        "The store will sell imported drinks. In addition, it will offer a subscription club.",
+        "This tool is fast. It's also cost-effective for this use case."
       ],
-      compare:{
-        en:"In academic writing (IELTS Task 2), 'moreover' and 'furthermore' signal you can vary register — using only 'and' throughout caps your Lexical Resource score.",
-        pt:"Em texto acadêmico (IELTS Task 2), 'moreover' e 'furthermore' mostram que você varia o registro — usar só 'and' o tempo todo limita sua nota de Lexical Resource."
-      },
-      warn_en:"Don't overuse formal connectors in casual speaking — it sounds robotic. Reserve 'moreover/furthermore' for writing or formal speaking contexts (IELTS Part 3, presentations).",
-      warn_pt:"Não exagere com conectores formais na fala casual — soa robótico. Reserve 'moreover/furthermore' pra texto escrito ou contextos formais de fala (IELTS Part 3, apresentações)."
+      compare:`In academic writing (IELTS Task 2), 'moreover' and 'furthermore' signal you can vary register — using only 'and' throughout caps your Lexical Resource score.`,
+      warn:`Don't overuse formal connectors in casual speaking — it sounds robotic. Reserve 'moreover/furthermore' for writing or formal speaking contexts (IELTS Part 3, presentations).`
     },
     {
       id:"conn-contrast",
-      title:"Contraste",
+      title:"Concession & Contrast",
       tag:"but, however, although, despite, whereas",
-      logic_en:"Signals a contradiction or unexpected turn relative to the previous statement — the 'else' branch of an argument.",
-      logic_pt:"Sinaliza uma contradição ou virada inesperada em relação à afirmação anterior — o ramo 'else' de um argumento.",
-      when_en:"But/however = simple contrast between two clauses/sentences. Although/even though = contrast within ONE sentence, with a subordinate clause. Despite/in spite of = followed by a NOUN or V-ing, not a full clause. Whereas/while = comparing two contrasting facts side by side.",
-      when_pt:"But/however = contraste simples entre duas cláusulas/frases. Although/even though = contraste dentro de UMA frase, com cláusula subordinada. Despite/in spite of = seguido de SUBSTANTIVO ou V-ing, não cláusula completa. Whereas/while = comparar dois fatos contrastantes lado a lado.",
+      logic:`Signals a contradiction or unexpected turn relative to the previous statement — the 'else' branch of an argument.`,
+      when:`But/however = simple contrast between two clauses/sentences. Although/even though = contrast within ONE sentence, with a subordinate clause. Despite/in spite of = followed by a NOUN or V-ing, not a full clause. Whereas/while = comparing two contrasting facts side by side.`,
       formulas:[
-        {tag:"but", val:"Sentence, but + Sentence."},
-        {tag:"however", val:"Sentence. However, + Sentence."},
-        {tag:"although", val:"Although + Subject + Verb, Subject + Verb."},
-        {tag:"despite", val:"Despite + Noun/V-ing, Subject + Verb."},
-        {tag:"whereas", val:"Subject + Verb, whereas + Subject + Verb."}
+        {tag:"but", val:`Sentence, but + Sentence.`},
+        {tag:"however", val:`Sentence. However, + Sentence.`},
+        {tag:"although", val:`Although + Subject + Verb, Subject + Verb.`},
+        {tag:"despite", val:`Despite + Noun/V-ing, Subject + Verb.`},
+        {tag:"whereas", val:`Subject + Verb, whereas + Subject + Verb.`}
       ],
       examples:[
-        {en:"Although regulatory approval takes time, it protects the business legally.", pt:"Embora a aprovação regulatória demore, ela protege o negócio legalmente."},
-        {en:"Despite the delays, the project is almost ready.", pt:"Apesar dos atrasos, o projeto está quase pronto."},
-        {en:"Basic plans are available everywhere, whereas premium plans require special setup.", pt:"Planos básicos estão disponíveis em todo lugar, enquanto planos premium exigem configuração especial."}
+        "Although regulatory approval takes time, it protects the business legally.",
+        "Despite the delays, the project is almost ready.",
+        "Basic plans are available everywhere, whereas premium plans require special setup."
       ],
-      compare:{
-        en:"'Despite' is followed by a noun phrase or V-ing — NEVER a full clause with subject+verb. 'Despite it rains' is wrong; say 'Despite the rain' or 'Despite raining'.",
-        pt:"'Despite' é seguido de substantivo ou V-ing — NUNCA uma cláusula completa com sujeito+verbo. 'Despite it rains' está errado; o certo é 'Despite the rain' ou 'Despite raining'."
-      },
-      warn_en:"Critical mistake: 'Despite of' doesn't exist — it's 'despite' OR 'in spite of', never 'despite of'.",
-      warn_pt:"Erro crítico: 'despite of' não existe — é 'despite' OU 'in spite of', nunca 'despite of'."
+      compare:`'Despite' is followed by a noun phrase or V-ing — NEVER a full clause with subject+verb. 'Despite it rains' is wrong; say 'Despite the rain' or 'Despite raining'.`,
+      warn:`Critical mistake: 'Despite of' doesn't exist — it's 'despite' OR 'in spite of', never 'despite of'.`
     },
     {
       id:"conn-cause-effect",
-      title:"Causa e Efeito",
+      title:"Reason & Result",
       tag:"because, since, therefore, as a result",
-      logic_en:"Marks a logical cause-effect relationship — exactly like a function returning a result based on an input condition.",
-      logic_pt:"Marca uma relação lógica de causa-efeito — exatamente como uma função retornando um resultado baseado numa condição de entrada.",
-      when_en:"Because/since/as = introduce the CAUSE (can start or be in the middle of a sentence). Therefore/thus/as a result/consequently = introduce the RESULT, usually starting a new sentence, more formal.",
-      when_pt:"Because/since/as = introduzem a CAUSA (pode começar ou estar no meio da frase). Therefore/thus/as a result/consequently = introduzem o RESULTADO, geralmente começando frase nova, mais formal.",
+      logic:`Marks a logical cause-effect relationship — exactly like a function returning a result based on an input condition.`,
+      when:`Because/since/as = introduce the CAUSE (can start or be in the middle of a sentence). Therefore/thus/as a result/consequently = introduce the RESULT, usually starting a new sentence, more formal.`,
       formulas:[
-        {tag:"cause", val:"Sentence + because/since/as + Cause."},
-        {tag:"result", val:"Cause. Therefore, / As a result, / Consequently, + Result."}
+        {tag:"cause", val:`Sentence + because/since/as + Cause.`},
+        {tag:"result", val:`Cause. Therefore, / As a result, / Consequently, + Result.`}
       ],
       examples:[
-        {en:"We chose this supplier because it's significantly cheaper than the alternative for this volume.", pt:"Escolhemos esse fornecedor porque é significativamente mais barato que a alternativa pra esse volume."},
-        {en:"The product wasn't approved by the regulator. As a result, we removed it from the catalog.", pt:"O produto não tinha aprovação do órgão regulador. Como resultado, nós o removemos do catálogo."}
+        "We chose this supplier because it's significantly cheaper than the alternative for this volume.",
+        "The product wasn't approved by the regulator. As a result, we removed it from the catalog."
       ],
-      compare:{
-        en:"'Because of' is followed by a noun, while 'because' is followed by a full clause — a structural distinction many learners blur.",
-        pt:"'Because of' é seguido de substantivo, enquanto 'because' é seguido de cláusula completa — uma distinção estrutural que muita gente embaralha. Compare: 'because of the delay' (substantivo) vs 'because the import was delayed' (cláusula)."
-      },
-      warn_en:"For IELTS Speaking Part 3, using 'therefore/consequently' instead of always 'so' raises your perceived formality and range significantly.",
-      warn_pt:"No IELTS Speaking Part 3, usar 'therefore/consequently' em vez de sempre 'so' aumenta bastante sua formalidade percebida e seu repertório."
+      compare:`'Because of' is followed by a noun, while 'because' is followed by a full clause — a structural distinction many learners blur.`,
+      warn:`For IELTS Speaking Part 3, using 'therefore/consequently' instead of always 'so' raises your perceived formality and range significantly.`
     },
     {
       id:"conn-sequence",
-      title:"Sequência",
+      title:"Sequence",
       tag:"first, then, after that, finally",
-      logic_en:"Organizes ideas or steps in chronological/logical order — like numbering steps in a process or algorithm.",
-      logic_pt:"Organiza ideias ou passos em ordem cronológica/lógica — como numerar passos de um processo ou algoritmo.",
-      when_en:"Describing processes, telling stories, structuring an argument step by step — very useful for IELTS Writing Task 1 (process description) and Speaking Part 2 (storytelling).",
-      when_pt:"Descrever processos, contar histórias, estruturar um argumento passo a passo — muito útil pro IELTS Writing Task 1 (descrição de processo) e Speaking Part 2 (contar histórias).",
+      logic:`Organizes ideas or steps in chronological/logical order — like numbering steps in a process or algorithm.`,
+      when:`Describing processes, telling stories, structuring an argument step by step — very useful for IELTS Writing Task 1 (process description) and Speaking Part 2 (storytelling).`,
       formulas:[
-        {tag:"struct", val:"First, ... Then/Next, ... After that, ... Finally, ..."}
+        {tag:"struct", val:`First, ... Then/Next, ... After that, ... Finally, ...`}
       ],
       examples:[
-        {en:"First, we validate the product against official sources. Then, we classify it by category.", pt:"Primeiro, validamos o produto em fontes oficiais. Depois, classificamos por categoria."},
-        {en:"Finally, we submit the documentation to the regulator.", pt:"Por fim, enviamos a documentação pro órgão regulador."}
+        "First, we validate the product against official sources. Then, we classify it by category.",
+        "Finally, we submit the documentation to the regulator."
       ],
-      compare:{
-        en:"This maps almost 1:1 onto pseudocode structure — 'first/then/finally' is literally step 1, step 2, step n. Easy win for a logical thinker.",
-        pt:"Isso mapeia quase 1:1 com estrutura de pseudocódigo — 'first/then/finally' é literalmente passo 1, passo 2, passo n. Vitória fácil pra quem pensa de forma lógica."
-      },
-      warn_en:"No major trap — just don't overuse 'and then... and then...' in formal writing; vary with the words above.",
-      warn_pt:"Sem armadilha grande — só não fique repetindo 'and then... and then...' em texto formal; varie com as palavras acima."
+      compare:`This maps almost 1:1 onto pseudocode structure — 'first/then/finally' is literally step 1, step 2, step n. Easy win for a logical thinker.`,
+      warn:`No major trap — just don't overuse 'and then... and then...' in formal writing; vary with the words above.`
     },
     {
       id:"conn-opinion",
-      title:"Opinião e Persuasão",
+      title:"Expressing Opinion & Stance",
       tag:"in my opinion, arguably, it could be argued",
-      logic_en:"Frames a statement as a viewpoint rather than fact — critical for IELTS Speaking Part 3 and Writing Task 2, where you must argue a position while sounding balanced and academic.",
-      logic_pt:"Enquadra uma afirmação como ponto de vista, não fato — crítico pro IELTS Speaking Part 3 e Writing Task 2, onde você precisa defender uma posição parecendo equilibrado e acadêmico.",
-      when_en:"In my opinion/I believe = direct, personal. Arguably/it could be argued that = academic, hedged, sounds more objective. From my point of view = personal but slightly more formal than 'I think'.",
-      when_pt:"In my opinion/I believe = direto, pessoal. Arguably/it could be argued that = acadêmico, com ressalva, soa mais objetivo. From my point of view = pessoal mas um pouco mais formal que 'I think'.",
+      logic:`Frames a statement as a viewpoint rather than fact — critical for IELTS Speaking Part 3 and Writing Task 2, where you must argue a position while sounding balanced and academic.`,
+      when:`In my opinion/I believe = direct, personal. Arguably/it could be argued that = academic, hedged, sounds more objective. From my point of view = personal but slightly more formal than 'I think'.`,
       formulas:[
-        {tag:"personal", val:"In my opinion, / I believe (that) + Statement."},
-        {tag:"academic", val:"It could be argued that + Statement. / Arguably, + Statement."}
+        {tag:"personal", val:`In my opinion, / I believe (that) + Statement.`},
+        {tag:"academic", val:`It could be argued that + Statement. / Arguably, + Statement.`}
       ],
       examples:[
-        {en:"In my opinion, validating demand before investing capital reduces risk significantly.", pt:"Na minha opinião, validar a demanda antes de investir capital reduz o risco significativamente."},
-        {en:"It could be argued that regulatory compliance is the real differentiator in this market.", pt:"Pode-se argumentar que a conformidade regulatória é o verdadeiro diferencial nesse mercado."}
+        "In my opinion, validating demand before investing capital reduces risk significantly.",
+        "It could be argued that regulatory compliance is the real differentiator in this market."
       ],
-      compare:{
-        en:"IELTS examiners specifically reward hedging language ('arguably', 'it seems that', 'tend to') because it shows nuance instead of absolute claims.",
-        pt:"Examinadores do IELTS especificamente recompensam linguagem de ressalva ('arguably', 'it seems that', 'tend to') porque mostra nuance em vez de afirmações absolutas."
-      },
-      warn_en:"Avoid 'I think that's true' as your only opinion phrase throughout the whole test — examiners notice repetition and it caps your Lexical Resource score.",
-      warn_pt:"Evite usar 'I think that's true' como sua única frase de opinião na prova toda — examinadores notam repetição e isso limita sua nota de Lexical Resource."
+      compare:`IELTS examiners specifically reward hedging language ('arguably', 'it seems that', 'tend to') because it shows nuance instead of absolute claims.`,
+      warn:`Avoid 'I think that's true' as your only opinion phrase throughout the whole test — examiners notice repetition and it caps your Lexical Resource score.`
     }
   ]
 };
-
-
-/* ============================================================
-   GROUP 6 — ARTIGOS, QUANTIFICADORES E PRONOMES
-   ============================================================ */
