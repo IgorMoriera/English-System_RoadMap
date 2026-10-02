@@ -1,5 +1,5 @@
 const GROUP_6 = {
-  id: "Articles, Quantifiers & Pronouns",
+  id: "g6",
   num: "06",
   title: "Articles, Quantifiers & Pronouns",
   level: "basic-to-intermediate",
@@ -7,7 +7,7 @@ const GROUP_6 = {
   topics: [
     {
       id:"articles",
-      title:"Articles — A | An | The | (no article)",
+      title:"Articles — A / An / The / (no article)",
       tag:"Definite vs Indefinite",
       logic:`'A/an' = indefinite, introduces something new or unspecified (like declaring a new variable). 'The' = definite, refers to something already known/specific (like referencing an existing variable). No article = general/abstract concept or plural general statement.`,
       when:`A/an: first mention, one of many, job/role (I'm a developer). The: specific, already mentioned, unique things (the sun, the internet), superlatives (the best). No article: general plurals (Cats are independent), abstract nouns (Love is complex), most countries/languages.`,
@@ -64,7 +64,7 @@ const GROUP_6 = {
     },
     {
       id:"quantifiers",
-      title:"Quantifiers — Some | Any | No | Every",
+      title:"Quantifiers — Some / Any / No / Every",
       tag:"some/any, all/none, every/each",
       logic:`Specifies quantity without an exact number — like boolean/range logic for amounts. 'Some' = positive statements, 'any' = questions/negatives, 'no' = zero quantity, 'every/each' = all members of a group, considered individually or collectively.`,
       when:`Some (affirmative: I have some questions), any (questions/negative: Do you have any questions? / I don't have any), every (group as a whole: Every employee needs a badge), each (group members individually: Each product has its own registration).`,

@@ -1,5 +1,5 @@
 const GROUP_5 = {
-  id: "Connectors & Discourse",
+  id: "g5",
   num: "05",
   title: "Connectors & Discourse",
   level: "intermediate-to-advanced",
@@ -7,7 +7,7 @@ const GROUP_5 = {
   topics: [
     {
       id:"conn-addition",
-      title:"Addition",
+      title:"Adição",
       tag:"and, also, in addition, moreover",
       logic:`Adds another point to support the same idea — like appending another argument to the same logical thread.`,
       when:`Casual: also, too, as well. Formal/written: in addition, furthermore, moreover. Use formal versions in IELTS Writing/Speaking Part 3.`,
@@ -24,7 +24,7 @@ const GROUP_5 = {
     },
     {
       id:"conn-contrast",
-      title:"Concession & Contrast",
+      title:"Contraste",
       tag:"but, however, although, despite, whereas",
       logic:`Signals a contradiction or unexpected turn relative to the previous statement — the 'else' branch of an argument.`,
       when:`But/however = simple contrast between two clauses/sentences. Although/even though = contrast within ONE sentence, with a subordinate clause. Despite/in spite of = followed by a NOUN or V-ing, not a full clause. Whereas/while = comparing two contrasting facts side by side.`,
@@ -45,7 +45,7 @@ const GROUP_5 = {
     },
     {
       id:"conn-cause-effect",
-      title:"Reason & Result",
+      title:"Causa e Efeito",
       tag:"because, since, therefore, as a result",
       logic:`Marks a logical cause-effect relationship — exactly like a function returning a result based on an input condition.`,
       when:`Because/since/as = introduce the CAUSE (can start or be in the middle of a sentence). Therefore/thus/as a result/consequently = introduce the RESULT, usually starting a new sentence, more formal.`,
@@ -62,7 +62,7 @@ const GROUP_5 = {
     },
     {
       id:"conn-sequence",
-      title:"Sequence",
+      title:"Sequência",
       tag:"first, then, after that, finally",
       logic:`Organizes ideas or steps in chronological/logical order — like numbering steps in a process or algorithm.`,
       when:`Describing processes, telling stories, structuring an argument step by step — very useful for IELTS Writing Task 1 (process description) and Speaking Part 2 (storytelling).`,
@@ -78,7 +78,7 @@ const GROUP_5 = {
     },
     {
       id:"conn-opinion",
-      title:"Expressing Opinion & Stance",
+      title:"Opinião e Persuasão",
       tag:"in my opinion, arguably, it could be argued",
       logic:`Frames a statement as a viewpoint rather than fact — critical for IELTS Speaking Part 3 and Writing Task 2, where you must argue a position while sounding balanced and academic.`,
       when:`In my opinion/I believe = direct, personal. Arguably/it could be argued that = academic, hedged, sounds more objective. From my point of view = personal but slightly more formal than 'I think'.`,

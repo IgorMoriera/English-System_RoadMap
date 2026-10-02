@@ -1,5 +1,5 @@
 const GROUP_1 = {
-  id: "Verb System",
+  id: "g1",
   num: "01",
   title: "Verb System — Time × Aspect",
   level: "basic-to-advanced",

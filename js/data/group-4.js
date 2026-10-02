@@ -1,5 +1,5 @@
 const GROUP_4 = {
-  id: "Sentence Structures",
+  id: "g4",
   num: "04",
   title: "Sentence Structures",
   level: "intermediate-to-advanced",

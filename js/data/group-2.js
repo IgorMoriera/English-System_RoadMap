@@ -1,5 +1,5 @@
 const GROUP_2 = {
-  id: "Conditionals & Passive Voice",
+  id: "g2",
   num: "02",
   title: "Conditionals & Passive Voice",
   level: "intermediate-to-advanced",

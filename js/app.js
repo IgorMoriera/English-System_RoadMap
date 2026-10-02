@@ -11,12 +11,14 @@ const LANGS = [
   { code: null,    label: "EN",    flag: "🇬🇧" },  // English = default, no overlay
   { code: "pt-BR", label: "PT-BR", flag: "🇧🇷" },
   { code: "es",    label: "ES",    flag: "🇪🇸" },
+  { code: "zh-CN", label: "中文",   flag: "🇨🇳" },
 ];
 
 // Map code → dictionary object. Add new langs here when creating new lang files.
 const LANG_DICTS = {
   "pt-BR": typeof LANG_PT_BR !== 'undefined' ? LANG_PT_BR : {},
   "es":    typeof LANG_ES    !== 'undefined' ? LANG_ES    : {},
+  "zh-CN": typeof LANG_ZH_CN !== 'undefined' ? LANG_ZH_CN : {},
 };
 
 let activeLang = null; // null = English only
@@ -363,8 +365,13 @@ function renderIrregularVerbs(filter=''){
   const f = filter.toLowerCase().trim();
   const data = IRREGULAR_VERBS;
   let totalShown = 0;
+  const showTr = !!activeLang;   // translation column only when a language is active
   const patternsHtml = data.patterns.map(p=>{
-    const rows = p.verbs.filter(v=> !f || v.join(' ').toLowerCase().includes(f));
+    const rows = p.verbs.filter(v=>{
+      if(!f) return true;
+      const hay = v.join(' ') + ' ' + L(`irv.tr.${v[0]}`,'');
+      return hay.toLowerCase().includes(f);
+    });
     totalShown += rows.length;
     if(rows.length===0) return '';
     return `
@@ -372,11 +379,11 @@ function renderIrregularVerbs(filter=''){
       <div class="ref-pattern-head">
         <div class="ref-pattern-label">${L(`irv.${p.id}.label`, p.label)}</div>
         <div class="ref-pattern-note">${p.note}</div>
-        ${activeLang ? (() => { const tx = L(`irv.${p.id}.note`,''); return tx ? `<div class="ref-pattern-note pt">${tx}</div>` : ''; })() : ''}
+        ${showTr ? (() => { const tx = L(`irv.${p.id}.note`,''); return tx ? `<div class="ref-pattern-note pt">${tx}</div>` : ''; })() : ''}
       </div>
       <table class="verb-table">
-        <tr><th>Base (V1)</th><th>Past (V2)</th><th>Participle (V3)</th><th>${L('ref_col_translation','Translation')}</th></tr>
-        ${rows.map(v=>`<tr><td class="v1">${v[0]}</td><td class="v2">${v[1]}</td><td class="v3">${v[2]}</td><td class="vpt">${v[3]}</td></tr>`).join('')}
+        <tr><th>Base (V1)</th><th>Past (V2)</th><th>Participle (V3)</th>${showTr ? `<th>${L('ref_col_translation','Translation')}</th>` : ''}</tr>
+        ${rows.map(v=>`<tr><td class="v1">${v[0]}</td><td class="v2">${v[1]}</td><td class="v3">${v[2]}</td>${showTr ? `<td class="vpt">${L(`irv.tr.${v[0]}`,'')}</td>` : ''}</tr>`).join('')}
       </table>
     </div>`;
   }).join('');
@@ -402,19 +409,25 @@ function renderPhrasalVerbs(filter=''){
   const data = PHRASAL_VERBS;
   let totalShown = 0;
   const groupsHtml = data.groups.map(g=>{
-    const rows = g.verbs.filter(v=> !f || v.join(' ').toLowerCase().includes(f));
+    const rows = g.verbs.filter(v=>{
+      if(!f) return true;
+      const hay = v.join(' ') + ' ' + L(`pv.tr.${v[0]}`,'');
+      return hay.toLowerCase().includes(f);
+    });
     totalShown += rows.length;
     if(rows.length===0) return '';
     return `
     <div class="pv-group">
       <div class="pv-group-head">${g.base}</div>
-      ${rows.map(v=>`
+      ${rows.map(v=>{
+        const meaning = L(`pv.tr.${v[0]}`,'');
+        return `
         <div class="pv-row">
           <div class="pv-phrase">${v[0]}</div>
-          <div class="pv-pt">${v[1]}</div>
-          <div class="pv-example">${v[2]}</div>
-        </div>
-      `).join('')}
+          ${meaning ? `<div class="pv-pt">${meaning}</div>` : ''}
+          <div class="pv-example">${v[1]}</div>
+        </div>`;
+      }).join('')}
     </div>`;
   }).join('');
 
@@ -438,20 +451,25 @@ function renderCollocations(filter=''){
   const f = filter.toLowerCase().trim();
   const data = COLLOCATIONS;
   let totalShown = 0;
-  const catsHtml = data.categories.map(c=>{
-    const rows = c.pairs.filter(p=> !f || p.join(' ').toLowerCase().includes(f));
+  const showTr = !!activeLang;   // translation column only when a language is active
+  const catsHtml = data.categories.map((c, ci)=>{
+    const rows = c.pairs.filter(p=>{
+      if(!f) return true;
+      const hay = p.join(' ') + ' ' + L(`col.tr.${p[0]}`,'');
+      return hay.toLowerCase().includes(f);
+    });
     totalShown += rows.length;
     if(rows.length===0) return '';
     return `
     <div class="ref-pattern">
       <div class="ref-pattern-head">
-        <div class="ref-pattern-label">${L(`col.cat.${data.categories.indexOf(c)}.label`, c.label)}</div>
+        <div class="ref-pattern-label">${L(`col.cat.${ci}.label`, c.label)}</div>
         <div class="ref-pattern-note">${c.note}</div>
-        ${activeLang ? (() => { const tx = L(`col.cat.${data.categories.indexOf(c)}.note`,''); return tx ? `<div class="ref-pattern-note pt">${tx}</div>` : ''; })() : ''}
+        ${showTr ? (() => { const tx = L(`col.cat.${ci}.note`,''); return tx ? `<div class="ref-pattern-note pt">${tx}</div>` : ''; })() : ''}
       </div>
       <table class="colloc-table">
-        <tr><th>Expression</th><th>${L('ref_col_translation','Translation')}</th><th>Note</th></tr>
-        ${rows.map(p=>`<tr><td class="cphrase">${p[0]}</td><td class="cpt">${p[1]}</td><td class="cnote">${p[2]}</td></tr>`).join('')}
+        <tr><th>Expression</th>${showTr ? `<th>${L('ref_col_translation','Translation')}</th>` : ''}<th>Note</th></tr>
+        ${rows.map(p=>`<tr><td class="cphrase">${p[0]}</td>${showTr ? `<td class="cpt">${L(`col.tr.${p[0]}`,'')}</td>` : ''}<td class="cnote">${p[1]}</td></tr>`).join('')}
       </table>
     </div>`;
   }).join('');

@@ -1,5 +1,5 @@
 const GROUP_3 = {
-  id: "Modal Verbs",
+  id: "g3",
   num: "03",
   title: "Modal Verbs — By Logical Function",
   level: "intermediate",
@@ -7,7 +7,7 @@ const GROUP_3 = {
   topics: [
     {
       id:"modal-ability",
-      title:"Ability — Can | Could | Be able to",
+      title:"Capacidade — Can / Could / Be able to",
       tag:"Ability",
       logic:`Expresses ability or skill to do something. 'Can' = present ability, 'could' = past ability or polite request, 'be able to' = ability in any tense (fills the gap can/could can't cover, like future or perfect).`,
       when:`Present ability (I can code in Python), past ability (I could swim at age 5), future/other tenses ability (I will be able to launch the store next year — 'will can' doesn't exist).`,
@@ -26,7 +26,7 @@ const GROUP_3 = {
     },
     {
       id:"modal-certainty",
-      title:"Certainty / Deduction — Must | Can't | Might | May | Could",
+      title:"Certeza/Dedução — Must / Can't / Might / May / Could",
       tag:"Certainty & Deduction",
       logic:`Used to express how CERTAIN you are about something, based on evidence — like assigning a confidence level to a logical conclusion. Must = highly certain (positive), can't = highly certain (negative), might/may/could = uncertain, possible.`,
       when:`Deducing/guessing based on evidence — not about permission or obligation here, purely about probability/certainty.`,
@@ -45,7 +45,7 @@ const GROUP_3 = {
     },
     {
       id:"modal-obligation",
-      title:"Obligation — Must | Have to | Should | Need to",
+      title:"Obrigação — Must / Have to / Should / Need to",
       tag:"Obligation & Necessity",
       logic:`Expresses different STRENGTHS of obligation. Must = strong, internal/speaker's authority. Have to = strong, external rule/authority. Should = advice, not obligation. Need to = necessity, practical.`,
       when:`Must (rules you set for yourself or strong recommendation), have to (external rules: law, company policy), should (advice — weaker), need to (practical necessity).`,
@@ -65,7 +65,7 @@ const GROUP_3 = {
     },
     {
       id:"modal-advice",
-      title:"Advice — Should | Ought to | Had better",
+      title:"Conselho — Should / Ought to / Had better",
       tag:"Advice",
       logic:`Recommends a course of action without forcing it. 'Should/ought to' = general advice. 'Had better' = stronger, implies a negative consequence if not followed.`,
       when:`Giving recommendations, suggesting a better course of action, warning about consequences.`,
@@ -83,7 +83,7 @@ const GROUP_3 = {
     },
     {
       id:"modal-permission",
-      title:"Permission — Can | Could | May | Might",
+      title:"Permissão — Can / Could / May / Might",
       tag:"Permission",
       logic:`Used to ask for or give permission. 'Can' = informal, 'could/may' = more polite/formal, 'might' = very formal, rare in modern speech for permission.`,
       when:`Requesting permission in different registers — casual conversation vs business/formal context.`,
